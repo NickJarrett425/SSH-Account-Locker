@@ -1,16 +1,21 @@
 import re
 
-log_text = "Nov 27 15:03:14 VM sshd[3129]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed"
+# Specify the path to your log file
+log_file_path = "auth.txt"
 
-# Define a regular expression pattern to match the username
-pattern = r'user=([^ ]+)'
+# Read the contents of the log file
+with open(log_file_path, 'r') as file:
+    log_text = file.read()
 
-# Use re.search to find the pattern in the text
-match = re.search(pattern, log_text)
+# Define a regular expression pattern to match the authentication failure and username
+pattern = r'authentication failure;.*user=([^\s]+)'
 
-# Extract the username if a match is found
-if match:
-    username = match.group(1)
-    print("Username:", username)
+# Use re.findall to find all matches in the text
+matches = re.findall(pattern, log_text)
+
+# Print the usernames for each authentication failure
+if matches:
+    for username in matches:
+        print("Username:", username)
 else:
-    print("Username not found in the log text.")
+    print("No authentication failures found in the log file.")
