@@ -1,46 +1,12 @@
 Nov 27 14:49:21 VM sshd[2839]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 14:49:23 VM sshd[2839]: Failed password for seed from 10.0.2.6 port 44690 ssh2
-Nov 27 14:49:32 VM sshd[2839]: message repeated 2 times: [ Failed password for seed from 10.0.2.6 port 44690 ssh2]
-Nov 27 14:49:32 VM sshd[2839]: Connection closed by authenticating user seed 10.0.2.6 port 44690 [preauth]
 Nov 27 14:49:32 VM sshd[2839]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 14:50:22 VM sshd[2854]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 14:50:23 VM sshd[2854]: Failed password for seed from 10.0.2.6 port 44692 ssh2
-Nov 27 14:50:31 VM sshd[2854]: message repeated 2 times: [ Failed password for seed from 10.0.2.6 port 44692 ssh2]
-Nov 27 14:50:32 VM sshd[2854]: Connection closed by authenticating user seed 10.0.2.6 port 44692 [preauth]
 Nov 27 14:50:32 VM sshd[2854]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 15:02:50 VM sshd[3120]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:02:51 VM sshd[3120]: Failed password for seed from 10.0.2.6 port 44700 ssh2
-Nov 27 15:02:58 VM sshd[3120]: message repeated 2 times: [ Failed password for seed from 10.0.2.6 port 44700 ssh2]
-Nov 27 15:02:59 VM sshd[3120]: Connection closed by authenticating user seed 10.0.2.6 port 44700 [preauth]
 Nov 27 15:02:59 VM sshd[3120]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 15:03:03 VM sshd[3125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:04 VM sshd[3125]: Failed password for seed from 10.0.2.6 port 44702 ssh2
-Nov 27 15:03:11 VM sshd[3125]: message repeated 2 times: [ Failed password for seed from 10.0.2.6 port 44702 ssh2]
-Nov 27 15:03:12 VM sshd[3125]: Connection closed by authenticating user seed 10.0.2.6 port 44702 [preauth]
 Nov 27 15:03:12 VM sshd[3125]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 15:03:14 VM sshd[3129]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:15 VM sshd[3129]: Failed password for seed from 10.0.2.6 port 44704 ssh2
-Nov 27 15:03:22 VM sshd[3129]: message repeated 2 times: [ Failed password for seed from 10.0.2.6 port 44704 ssh2]
-Nov 27 15:03:24 VM sshd[3129]: Connection closed by authenticating user seed 10.0.2.6 port 44704 [preauth]
 Nov 27 15:03:24 VM sshd[3129]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:17:01 VM CRON[3303]: pam_unix(cron:session): session opened for user root by (uid=0)
-Nov 27 15:17:01 VM CRON[3303]: pam_unix(cron:session): session closed for user root
 Nov 27 15:22:46 VM sshd[3404]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:22:48 VM sshd[3404]: Failed password for seed from 10.0.2.6 port 44714 ssh2
-Nov 27 15:22:51 VM sshd[3404]: Failed password for seed from 10.0.2.6 port 44714 ssh2
-Nov 27 15:22:55 VM sshd[3404]: Failed password for seed from 10.0.2.6 port 44714 ssh2
-Nov 27 15:22:56 VM sshd[3404]: Connection closed by authenticating user seed 10.0.2.6 port 44714 [preauth]
-Nov 27 15:22:56 VM sshd[3404]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:23:30 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
-Nov 27 15:23:35 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
-Nov 27 15:23:35 VM su: (to root) seed on pts/1
-Nov 27 15:23:35 VM su: pam_unix(su:session): session opened for user root by (uid=1000)
-Nov 27 15:24:31 VM sudo:     seed : TTY=pts/2 ; PWD=/home/seed ; USER=root ; COMMAND=/usr/bin/su
-Nov 27 15:24:31 VM sudo: pam_unix(sudo:session): session opened for user root by (uid=0)
-Nov 27 15:24:31 VM su: (to root) seed on pts/2
-Nov 27 15:24:31 VM su: pam_unix(su:session): session opened for user root by (uid=0)
-Nov 27 15:30:01 VM CRON[3528]: pam_unix(cron:session): session opened for user root by (uid=0)
-Nov 27 15:30:01 VM CRON[3528]: pam_unix(cron:session): session closed for user root
-Nov 27 15:32:04 VM su: pam_unix(su:session): session closed for user root
-Nov 27 15:32:14 VM su: pam_unix(su:session): session closed for user root
-Nov 27 15:32:14 VM sudo: pam_unix(sudo:session): session closed for user root
+Nov 27 15:30:56 VM sshd[3404]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed

@@ -1,5 +1,9 @@
 import re
 
+threshold_num = 3 # Number of failed login attempts before lockout.
+threshold_time = 300 # Time to check back for failed login attempts.
+lockout_time = 300 # Time for lockout after threshhold_num failed login attempts.
+
 # Specify the path to your log file
 log_file_path = "auth.txt"
 
