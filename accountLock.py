@@ -11,6 +11,25 @@ log_file_path = "auth.txt"
 with open(log_file_path, 'r') as file:
     log_text = file.read()
 
+with open(log_file_path, 'r') as file:
+    lines = file.readlines()
+
+last_line = lines[-1]
+
+# Extract the time from the last line
+curr_time_match = re.search(r' (\d+:\d+)', last_line)
+
+if curr_time_match:
+    curr_time = curr_time_match.group(1)
+
+    # Extract hour and minute
+    hour, minute = map(int, curr_time.split(':'))
+
+    print("Hour:", hour)
+    print("Minute:", minute)
+else:
+    print("Time not found in the last line.")
+
 # Define a regular expression pattern to match authentication failure and username
 pattern = r'(?:authentication failure|PAM (\d+) more authentication failures);.*user=([^\s]+)'
 
