@@ -13,9 +13,12 @@ pattern = r'authentication failure;.*user=([^\s]+)'
 # Use re.findall to find all matches in the text
 matches = re.findall(pattern, log_text)
 
-# Print the usernames for each authentication failure
-if matches:
-    for username in matches:
-        print("Username:", username)
+# Use a set to get unique usernames
+unique_usernames = set(matches)
+
+# Print the formatted failure message for each unique username
+if unique_usernames:
+    for username in unique_usernames:
+        print(f"{username} failed a login {matches.count(username)} times.")
 else:
     print("No authentication failures found in the log file.")
