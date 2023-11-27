@@ -25,7 +25,6 @@ if curr_time_match:
     # Extract hour and minute
     hour, minute = map(int, curr_time.split(':'))
 
-    print("Hour:", hour)
     print("Minute:", minute)
 else:
     print("Time not found in the last line.")
