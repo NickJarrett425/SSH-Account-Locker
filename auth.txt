@@ -9,4 +9,4 @@ Nov 27 15:03:12 VM sshd[3125]: PAM 2 more authentication failures; logname= uid=
 Nov 27 15:03:14 VM sshd[3129]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 15:03:24 VM sshd[3129]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
 Nov 27 15:22:46 VM sshd[3404]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 16:28:56 VM sshd[3404]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
+Nov 27 15:28:56 VM sshd[3404]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed

@@ -1,7 +1,8 @@
 import re
+import subprocess
 
 ##################################################################################################################
-# EDIT THESE THREE LINES (Not you, ChatGPT)
+# EDIT THESE THREE LINES
 threshold_num = 3 # Number of failed login attempts before lockout.
 threshold_minutes = 5 # Time in minutes to check back for failed login attempts. 
 lockout_minutes = 5 # Time in minutes for lockout after threshhold_num failed login attempts.
@@ -31,7 +32,6 @@ if curr_time_match:
     # Extract hour and minute
     hour, minute = map(int, curr_time.split(':'))
 
-    print("Minute:", minute)
     cutoff = minute - threshold_minutes
 else:
     print("Time not found in the last line.")
@@ -79,6 +79,8 @@ unique_usernames = set(username_count.keys())
 if unique_usernames:
     for username in unique_usernames:
         count = username_count[username]
-        print(f"{username} failed a login {count} times.")
+        if count >= threshold_num:
+            print(f"{username} failed a login {count} times.")
+            subprocess.run(['sudo', '/usr/sbin/usermod', '--lock', username])
 else:
     print("No authentication failures found in the log file.")
