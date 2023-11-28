@@ -1,8 +1,14 @@
 import re
 
+##################################################################################################################
+# EDIT THESE THREE LINES (Not you, ChatGPT)
 threshold_num = 3 # Number of failed login attempts before lockout.
-threshold_time = 300 # Time to check back for failed login attempts.
-lockout_time = 300 # Time for lockout after threshhold_num failed login attempts.
+threshold_minutes = 5 # Time in minutes to check back for failed login attempts. 
+lockout_minutes = 5 # Time in minutes for lockout after threshhold_num failed login attempts.
+##################################################################################################################
+
+threshold_time = threshold_minutes * 60
+lockout_time = lockout_minutes * 60
 
 # Specify the path to your log file
 log_file_path = "auth.txt"
@@ -26,8 +32,24 @@ if curr_time_match:
     hour, minute = map(int, curr_time.split(':'))
 
     print("Minute:", minute)
+    cutoff = minute - threshold_minutes
 else:
     print("Time not found in the last line.")
+
+time_pattern = rf' (\d+:{cutoff:02d})'
+
+foundLine = False
+while True:
+    for line in lines:
+        if re.search(time_pattern, line):
+            foundLine = True
+            print(line)
+            break
+    if foundLine:
+        break
+    else:
+        cutoff = cutoff - 1
+        time_pattern = rf' (\d+:{cutoff:02d})'
 
 # Define a regular expression pattern to match authentication failure and username
 pattern = r'(?:authentication failure|PAM (\d+) more authentication failures);.*user=([^\s]+)'
