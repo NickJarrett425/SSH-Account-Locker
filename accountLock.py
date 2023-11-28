@@ -38,18 +38,21 @@ else:
 
 time_pattern = rf' (\d+:{cutoff:02d})'
 
-foundLine = False
+found_line = False
 while True:
     for line in lines:
         if re.search(time_pattern, line):
-            foundLine = True
-            print(line)
+            found_line = True
+            start_index = lines.index(line)
             break
-    if foundLine:
+    if found_line:
         break
     else:
         cutoff = cutoff - 1
         time_pattern = rf' (\d+:{cutoff:02d})'
+
+log_text = ''.join(lines[start_index:])
+print(log_text)
 
 # Define a regular expression pattern to match authentication failure and username
 pattern = r'(?:authentication failure|PAM (\d+) more authentication failures);.*user=([^\s]+)'
