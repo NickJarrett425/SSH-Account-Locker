@@ -6,10 +6,10 @@ import time
 # EDIT THESE THREE LINES
 threshold_num = 3 # Number of failed login attempts before lockout.
 threshold_minutes = 5 # Time in minutes to check back for failed login attempts. 
-lockout_minutes = 5 # Time in minutes for lockout after threshhold_num failed login attempts.
+lockout_minutes = 1 # Time in minutes for lockout after threshhold_num failed login attempts.
 ##################################################################################################################
 
-lockout_time = lockout_minutes * 60
+lockout_time = lockout_minutes * 30
 
 log_file_path = "/var/log/auth.log"
 
@@ -39,6 +39,33 @@ while True:
     else:
         print("Time not found in the last line.")
 
+    # Segregate text by date.
+    date_match = re.search(r'Nov (\d+)', last_line)
+
+    if date_match:
+        date = int(date_match.group(1))
+    
+    time_pattern = rf'Nov {date:d}'
+
+    found_line = False
+    restartLoop = False
+    while True:
+        for line in lines:
+            if re.search(time_pattern, line):
+                start_index = lines.index(line)
+                found_line = True
+                break
+        if (found_line):
+            break
+        restartLoop = True
+        break
+
+    if restartLoop:
+        continue
+
+    lines = lines[start_index:]
+        
+    # Segregate text by time.
     time_pattern = rf' (\d+:{cutoff:02d})'
 
     found_line = False
@@ -82,12 +109,12 @@ while True:
             count = username_count[username]
             if count >= threshold_num and (username not in banned_users) and (username not in cantBan):
                 print(f"{username} failed a login {count} times.")
-                print(f"{username} has been locked out for {lockout_minutes} minutes!")
+                print(f"{username} has been locked out for {lockout_time} seconds!")
                 subprocess.run(['sudo', '/usr/sbin/usermod', '--lock', username])
                 banned_users[username] = time.time()
                 cantBan[username] = time.time()
     else:         
-        print("No authentication failures found in the log file.")
+        continue
 
     current_time = time.time()
     for username, ban_time in list(cantBan.items()):
@@ -97,8 +124,7 @@ while True:
             print(f"{username} was unblocked!")
             del banned_users[username]
 
-        # Remove the user from the banned list after being unbanned for 30 seconds.
-        if (current_time - cantBan[username]) > 30:
-            print("5 minutes have passed! User can be banned again.")
+        # Remove the user from the banned list after being unbanned for 60 seconds.
+        if (current_time - cantBan[username]) > 60:
+            print("60 seconds have passed! User can be banned again.")
             del cantBan[username]
-            
