@@ -1,12 +1,57 @@
-Nov 27 14:49:21 VM sshd[2839]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 14:49:32 VM sshd[2839]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 14:50:22 VM sshd[2854]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 14:50:32 VM sshd[2854]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:02:50 VM sshd[3120]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:02:59 VM sshd[3120]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:03 VM sshd[3125]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:12 VM sshd[3125]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:14 VM sshd[3129]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:03:24 VM sshd[3129]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:22:46 VM sshd[3404]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
-Nov 27 15:27:56 VM sshd[3404]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.6  user=seed
+Nov 28 00:17:01 VM CRON[39886]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 28 00:17:01 VM CRON[39886]: pam_unix(cron:session): session closed for user root
+Nov 28 01:17:01 VM CRON[40438]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 28 01:17:01 VM CRON[40438]: pam_unix(cron:session): session closed for user root
+Nov 28 05:17:01 VM CRON[40659]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 28 05:17:01 VM CRON[40659]: pam_unix(cron:session): session closed for user root
+Nov 28 05:43:01 VM CRON[40878]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov 28 05:43:01 VM CRON[40878]: pam_unix(cron:session): session closed for user root
+Nov 28 07:01:49 VM sshd[740]: Server listening on 0.0.0.0 port 22.
+Nov 28 07:01:49 VM sshd[740]: Server listening on :: port 22.
+Nov 28 07:01:49 VM systemd-logind[635]: New seat seat0.
+Nov 28 07:01:49 VM systemd-logind[635]: Watching system buttons on /dev/input/event0 (Power Button)
+Nov 28 07:01:49 VM systemd-logind[635]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Nov 28 07:01:50 VM systemd-logind[635]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Nov 28 07:01:50 VM gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm by (uid=0)
+Nov 28 07:01:51 VM systemd-logind[635]: New session c1 of user gdm.
+Nov 28 07:01:51 VM systemd: pam_unix(systemd-user:session): session opened for user gdm by (uid=0)
+Nov 28 07:01:58 VM polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.41 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Nov 28 07:02:02 VM gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:02:05 VM gdm-password]: pam_unix(gdm-password:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:02:05 VM gdm-password]: gkr-pam: unable to locate daemon control file
+Nov 28 07:02:05 VM gdm-password]: gkr-pam: stashed password to try later in open session
+Nov 28 07:02:05 VM gdm-password]: pam_unix(gdm-password:session): session opened for user seed by (uid=0)
+Nov 28 07:02:05 VM systemd-logind[635]: New session 2 of user seed.
+Nov 28 07:02:05 VM systemd: pam_unix(systemd-user:session): session opened for user seed by (uid=0)
+Nov 28 07:02:06 VM gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Nov 28 07:02:11 VM gnome-keyring-daemon[1844]: The PKCS#11 component was already initialized
+Nov 28 07:02:11 VM gnome-keyring-daemon[1844]: The Secret Service was already initialized
+Nov 28 07:02:15 VM polkitd(authority=local): Registered Authentication Agent for unix-session:2 (system bus name :1.84 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Nov 28 07:02:22 VM dbus-daemon[620]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Nov 28 07:02:28 VM gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Nov 28 07:02:28 VM systemd-logind[635]: Session c1 logged out. Waiting for processes to exit.
+Nov 28 07:02:28 VM systemd-logind[635]: Removed session c1.
+Nov 28 07:02:29 VM polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.41, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Nov 28 07:03:28 VM pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Nov 28 07:03:28 VM pkexec[2512]: seed: Executing command [USER=root] [TTY=unknown] [CWD=/home/seed] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Nov 28 07:03:52 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:03:53 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:03:53 VM su: (to root) seed on pts/0
+Nov 28 07:03:53 VM su: pam_unix(su:session): session opened for user root by (uid=1000)
+Nov 28 07:04:07 VM sshd[2561]: Accepted password for seed from 10.0.2.9 port 57510 ssh2
+Nov 28 07:04:07 VM sshd[2561]: pam_unix(sshd:session): session opened for user seed by (uid=0)
+Nov 28 07:04:07 VM systemd-logind[635]: New session 4 of user seed.
+Nov 28 07:04:09 VM sshd[2662]: Received disconnect from 10.0.2.9 port 57510:11: disconnected by user
+Nov 28 07:04:09 VM sshd[2662]: Disconnected from user seed 10.0.2.9 port 57510
+Nov 28 07:04:09 VM sshd[2561]: pam_unix(sshd:session): session closed for user seed
+Nov 28 07:04:09 VM systemd-logind[635]: Session 4 logged out. Waiting for processes to exit.
+Nov 28 07:04:09 VM systemd-logind[635]: Removed session 4.
+Nov 28 07:04:28 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:04:29 VM su: pam_unix(su:auth): Couldn't open /etc/securetty: No such file or directory
+Nov 28 07:04:29 VM su: (to root) seed on pts/1
+Nov 28 07:04:29 VM su: pam_unix(su:session): session opened for user root by (uid=1000)
+Nov 28 07:05:03 VM sshd[2712]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.9  user=seed
+Nov 28 07:05:05 VM sshd[2712]: Failed password for seed from 10.0.2.9 port 57512 ssh2
+Nov 28 07:05:12 VM sshd[2712]: message repeated 2 times: [ Failed password for seed from 10.0.2.9 port 57512 ssh2]
+Nov 28 07:05:13 VM sshd[2712]: Connection closed by authenticating user seed 10.0.2.9 port 57512 [preauth]
+Nov 28 07:05:13 VM sshd[2712]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.2.9  user=seed

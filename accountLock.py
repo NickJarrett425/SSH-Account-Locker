@@ -38,32 +38,6 @@ while True:
         cutoff = minute - threshold_minutes
     else:
         print("Time not found in the last line.")
-
-    # Segregate text by date.
-    date_match = re.search(r'Nov (\d+)', last_line)
-
-    if date_match:
-        date = int(date_match.group(1))
-    
-    time_pattern = rf'Nov {date:d}'
-
-    found_line = False
-    restartLoop = False
-    while True:
-        for line in lines:
-            if re.search(time_pattern, line):
-                start_index = lines.index(line)
-                found_line = True
-                break
-        if (found_line):
-            break
-        restartLoop = True
-        break
-
-    if restartLoop:
-        continue
-
-    lines = lines[start_index:]
         
     # Segregate text by time.
     time_pattern = rf' (\d+:{cutoff:02d})'
@@ -79,6 +53,9 @@ while True:
             break
         else:
             cutoff = cutoff - 1
+            if (cutoff == 0):
+                cutoff == 60
+
             time_pattern = rf' (\d+:{cutoff:02d})'
 
     log_text = ''.join(lines[start_index:])
