@@ -8,7 +8,6 @@ threshold_minutes = 5 # Time in minutes to check back for failed login attempts.
 lockout_minutes = 5 # Time in minutes for lockout after threshhold_num failed login attempts.
 ##################################################################################################################
 
-threshold_time = threshold_minutes * 60
 lockout_time = lockout_minutes * 60
 
 # Specify the path to your log file
