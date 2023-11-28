@@ -97,8 +97,8 @@ while True:
             print(f"{username} was unblocked!")
             del banned_users[username]
 
-        # Remove the user from the banned list after being unbanned for 5 minutes.
-        if (current_time - cantBan[username]) > 300:
+        # Remove the user from the banned list after being unbanned for 30 seconds.
+        if (current_time - cantBan[username]) > 30:
             print("5 minutes have passed! User can be banned again.")
             del cantBan[username]
             
