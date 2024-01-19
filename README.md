@@ -1,6 +1,6 @@
 # SSH Account Lockout Tool
 
-Founding Developers: Nicholas Jarrett, David Bradley, Neil Kuehn, and Dhruvisha Patel
+Founding Developers: Nicholas Jarrett and Blake Davis
 
 ## Project Overview
 The SSH Account Lockout Tool is an open-source command-line tool designed for Linux systems, enhancing security by tracking and temporarily locking accounts after multiple failed SSH login attempts. Developed with simplicity for smaller companies and individuals, it monitors auth.log, preventing unauthorized access. Its open-source nature makes it accessible and cost-effective compared to alternatives like Splunk. Distributed on GitHub, it's easy to update and maintain. The tool, developed in Python for Ubuntu, allows customization of lockout parameters. Successful testing confirms its efficacy in providing in-house security for Linux Debian-based environments. Future plans include adding functionalities based on user feedback and continuous updates.
